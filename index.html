@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>結び庵｜神社は、社長室だ。</title>
-<meta name="description" content="結び庵・神主の伊吹が教える、神様へのご挨拶の順序と参拝作法。ご祈祷・家祓い・護摩行のご相談も。">
+<meta name="description" content="結び庵・神主の伊吹が教える、神様へのご挨拶の順序と参拝作法。出張整体のほか、ご祈祷・家祓い・護摩行のご相談も。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="結び庵｜神社は、社長室だ。">
 <meta property="og:description" content="いきなり社長には会えない。神様にも、ご挨拶の順番がある。結び庵（神主・伊吹）のページ。">
@@ -343,6 +343,37 @@ p{margin:0}
 footer{border-top:1px solid var(--rule);padding:36px 0 48px;font-size:13px;color:var(--sumi-3)}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
+/* メニュー: 出張整体をメインに、神事・学びを分ける */
+.menu-head{max-width:46em}
+.main-svc{margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:end;padding:clamp(32px,5vw,64px);background:var(--night);color:var(--on-night);position:relative;overflow:hidden}
+.main-svc::after{content:"整";position:absolute;right:-.08em;top:-.22em;font-family:var(--mincho);font-weight:900;font-size:clamp(9rem,20vw,16rem);line-height:1;color:rgba(239,232,218,.05);pointer-events:none}
+.main-svc .badge{display:inline-block;padding:5px 12px;background:var(--shu);color:var(--washi);font-size:11.5px;font-weight:700;letter-spacing:.2em;margin-right:12px}
+.main-svc .tag{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--hinoki)}
+.main-svc h3{margin:18px 0 18px;font-family:var(--mincho);font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.2;letter-spacing:.06em}
+.main-svc p{color:var(--on-night-2);font-size:16px;max-width:32em}
+.main-svc-facts{position:relative;z-index:1;margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);border-top:1px solid var(--night-rule)}
+.main-svc-facts dt,.main-svc-facts dd{margin:0;padding:15px 0;border-bottom:1px solid var(--night-rule);font-size:14.5px}
+.main-svc-facts dt{padding-right:24px;color:var(--hinoki);font-weight:700;letter-spacing:.12em;white-space:nowrap}
+.main-svc-facts dd{color:var(--on-night)}
+.menu-group{margin-top:clamp(72px,9vw,120px)}
+.menu-group-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:end}
+.group-label{display:flex;align-items:center;gap:14px;font-size:13px;font-weight:700;letter-spacing:.24em;color:var(--sumi-2)}
+.group-label::after{content:"";flex:1;height:1px;background:var(--rule);max-width:120px}
+.group-title{margin-top:16px;font-family:var(--mincho);font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.45}
+.group-lead{margin-top:18px;color:var(--sumi-2);font-size:15.5px;max-width:30em}
+.menu-group .svc{margin-top:clamp(32px,4vw,48px)}
+.svc.cols2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.svc.cols2 li,.svc.cols2 li:not(:nth-child(3n+1)){padding:34px clamp(18px,2.4vw,36px) 38px 0;border-left:0}
+.svc.cols2 li:nth-child(2n){padding-left:clamp(18px,2.4vw,36px);border-left:1px solid var(--rule-soft)}
+.svc.cols1{grid-template-columns:1fr}
+.svc.cols1 li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr) auto;gap:8px clamp(20px,3vw,48px);align-items:baseline;padding-right:0}
+.svc.cols1 h3{margin:0}
+.svc.cols1 .tag{grid-column:1;grid-row:1}
+.svc.cols1 h3{grid-column:1;grid-row:2}
+.svc.cols1 p:not(.meta){grid-column:2;grid-row:1/3}
+.svc.cols1 .meta{grid-column:3;grid-row:1/3;margin:0;white-space:nowrap}
+@media (max-width:960px){.main-svc,.menu-group-head{grid-template-columns:1fr}.svc.cols1 li{grid-template-columns:1fr}.svc.cols1 .tag,.svc.cols1 h3,.svc.cols1 p:not(.meta),.svc.cols1 .meta{grid-column:1;grid-row:auto}.svc.cols1 .meta{margin-top:8px}}
+@media (max-width:600px){.svc.cols2{grid-template-columns:1fr}.svc.cols2 li,.svc.cols2 li:nth-child(2n){padding:28px 0;border-left:0}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
@@ -366,7 +397,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <a href="#route">ご挨拶ルート</a>
     <a href="#manners">参拝の作法</a>
     <a href="#story">歩んできた道</a>
-    <a href="#services">ご依頼について</a>
+    <a href="#services">メニュー</a>
     <a href="#profile">プロフィール</a>
   </nav>
   <a class="nav-cta" href="#route">あなたの神社を調べる<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -381,7 +412,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <p class="hero-lede ink" style="--d:650ms">知らない人が、いきなり社長に会えるでしょうか。神社も同じです。受付があり、順番があり、作法がある。<b>神様の世界も、結局は人間界と一緒。</b>神主として祭祀に立つ伊吹が、ご挨拶の筋道をお伝えします。</p>
       <div class="hero-actions ink" style="--d:800ms">
         <a class="btn shu" href="#order">ご挨拶の順番を試す<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn" href="#services">ご依頼について</a>
+        <a class="btn" href="#services">メニューを見る</a>
       </div>
     </div>
   </div>
@@ -542,22 +573,50 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <section id="services" class="sec grain" aria-labelledby="svc-title">
   <div class="wrap">
-    <div class="svc-head">
-      <div>
-        <div class="kicker"><i>六</i>ご依頼について</div>
-        <h2 id="svc-title" class="h2">偉いのは、<br>叶えてくださる<br><span class="r">神様</span>のほう。</h2>
-        <p class="lead">神主は、人と神様のあいだを取り持つ役目です。ご依頼の内容をよく伺い、神様にお伝えします。各地への出張にも対応しています。</p>
-      </div>
-      <figure class="svc-photo"><img src="img/harai.jpg" alt="紙垂とお供えを整えた祭壇の前で、祝詞を読み上げる伊吹" width="1600" height="900" loading="lazy"></figure>
+    <div class="menu-head">
+      <div class="kicker"><i>六</i>メニュー</div>
+      <h2 id="svc-title" class="h2">店を持たず、<br>あなたのもとへ<span class="r">伺います</span>。</h2>
+      <p class="lead">結び庵のメインは<b>出張整体</b>です。神主としてのご祈祷やお祓いも、あわせて承ります。</p>
     </div>
-    <ul class="svc">
-      <li><span class="tag">GOKITO</span><h3>ご祈祷</h3><p>商売繁盛、仕事、ご縁など。創業の年やこれからの目標まで具体的に伺い、その方のための祝詞を書いて奏上します。</p><p class="meta"><b>料金</b>準備中</p></li>
-      <li><span class="tag">YABARAI</span><h3>家祓い</h3><p>祭壇を組み、神様をお迎えして家を祓っていただく儀式です。ご不幸があったお宅は、四十九日（神道では五十日）を過ぎてから行います。</p><p class="meta"><b>料金</b>準備中</p></li>
-      <li><span class="tag">OHARAI</span><h3>人のお祓い</h3><p>転職や独立など、人生の節目に。新しい一歩を、すっきりした気持ちで踏み出したい方へ。</p><p class="meta"><b>料金</b>準備中</p></li>
-      <li><span class="tag">GOMAGYO</span><h3>護摩行</h3><p>淡路島で、おおむね毎月18日に。先祖供養やお願いごとを、火に託してお祈りします。遠方の方はご依頼のみも承ります。</p><p class="meta"><b>日程・料金</b>準備中</p></li>
-      <li><span class="tag">SEITAI</span><h3>整体（出張）</h3><p>家業の接骨院から数えて25年、体に向き合ってきた手。店舗を持たず、お客様のもとへ伺います。</p><p class="meta"><b>料金</b>準備中</p></li>
-      <li><span class="tag">SHUGYO</span><h3>修行合宿</h3><p>1泊2日で、滝行・座禅・神道や仏教の学び。スマホから離れて「不便」に身を置くと、忘れていた感覚が戻ってきます。</p><p class="meta"><b>日程・料金</b>準備中</p></li>
-    </ul>
+
+    <article class="main-svc" aria-labelledby="seitai-title">
+      <div class="main-svc-copy">
+        <span class="badge">MAIN MENU</span>
+        <span class="tag">SEITAI</span>
+        <h3 id="seitai-title">出張整体</h3>
+        <p>家業の接骨院から数えて25年、体に向き合ってきました。いまは店舗を持たず、お客様のもとへ伺っています。大会を控えたダンサーの方など、体を使う方にも続けて通っていただいています。</p>
+      </div>
+      <dl class="main-svc-facts">
+        <dt>施術時間</dt><dd>40分前後（目安）</dd>
+        <dt>伺う先</dt><dd>お客様のもとへ（場所はご相談ください）</dd>
+        <dt>出張エリア</dt><dd>準備中</dd>
+        <dt>料金</dt><dd>準備中</dd>
+      </dl>
+    </article>
+
+    <div class="menu-group">
+      <div class="menu-group-head">
+        <div>
+          <p class="group-label">神事のご依頼</p>
+          <h3 class="group-title">偉いのは、叶えてくださる<span class="r">神様</span>のほう。</h3>
+          <p class="group-lead">神主は、人と神様のあいだを取り持つ役目です。ご依頼の内容をよく伺い、神様にお伝えします。各地への出張にも対応しています。</p>
+        </div>
+        <figure class="svc-photo"><img src="img/harai.jpg" alt="紙垂とお供えを整えた祭壇の前で、祝詞を読み上げる伊吹" width="1600" height="900" loading="lazy"></figure>
+      </div>
+      <ul class="svc cols2">
+        <li><span class="tag">GOKITO</span><h3>ご祈祷</h3><p>商売繁盛、仕事、ご縁など。創業の年やこれからの目標まで具体的に伺い、その方のための祝詞を書いて奏上します。</p><p class="meta"><b>料金</b>準備中</p></li>
+        <li><span class="tag">YABARAI</span><h3>家祓い</h3><p>祭壇を組み、神様をお迎えして家を祓っていただく儀式です。ご不幸があったお宅は、四十九日（神道では五十日）を過ぎてから行います。</p><p class="meta"><b>料金</b>準備中</p></li>
+        <li><span class="tag">OHARAI</span><h3>人のお祓い</h3><p>転職や独立など、人生の節目に。新しい一歩を、すっきりした気持ちで踏み出したい方へ。</p><p class="meta"><b>料金</b>準備中</p></li>
+        <li><span class="tag">GOMAGYO</span><h3>護摩行</h3><p>淡路島で、おおむね毎月18日に。先祖供養やお願いごとを、火に託してお祈りします。遠方の方はご依頼のみも承ります。</p><p class="meta"><b>日程・料金</b>準備中</p></li>
+      </ul>
+    </div>
+
+    <div class="menu-group">
+      <p class="group-label">学び・体験</p>
+      <ul class="svc cols1">
+        <li><span class="tag">SHUGYO</span><h3>修行合宿</h3><p>1泊2日で、滝行・座禅・神道や仏教の学び。スマホから離れて「不便」に身を置くと、忘れていた感覚が戻ってきます。</p><p class="meta"><b>日程・料金</b>準備中</p></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -597,7 +656,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   <div class="wrap">
     <div class="seal-big" aria-hidden="true">結</div>
     <h2 id="close-title">まずは、<br>地元の神様にご挨拶を。</h2>
-    <p class="lead">公式LINEでは、神主が実際にしている参拝の順序と作法をまとめてお届けする予定です。ご祈祷・家祓い・護摩行のご相談も、LINEから受け付けます。</p>
+    <p class="lead">公式LINEでは、神主が実際にしている参拝の順序と作法をまとめてお届けする予定です。出張整体のご予約や、ご祈祷・家祓い・護摩行のご相談も、LINEから受け付けます。</p>
     <div class="gift">
       <div class="scroll">参拝の手引き<small>特典</small></div>
       <div>
@@ -623,7 +682,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 <footer>
   <div class="wrap">
     <span>結び庵　神主 伊吹</span>
-    <span>ご祈祷・家祓い・護摩行・出張整体</span>
+    <span>出張整体・ご祈祷・家祓い・護摩行</span>
   </div>
 </footer>
 
